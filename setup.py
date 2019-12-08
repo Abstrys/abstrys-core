@@ -5,4 +5,5 @@ setup(
     name="abstrys-core",
     version="0.1",
     packages=find_packages(),
+    namespace_packages=["abstrys"],
 )
