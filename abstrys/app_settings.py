@@ -13,15 +13,17 @@ class AppSettings(dict):
 
     The settings file is always named like this:
 
-        ~/.<app_name>/settings.json
+    .. parsed-literal::
 
-    Where <app_name> is the same value you pass to AppSettings() when creating the object.
+        :samp:`~/.{app_name}/settings.json`
+
+    Where :samp:`{app_name}` is the same value you pass to AppSettings() when creating the object.
     """
 
     def __init__(self, app_name):
         """
         Initialize the settings object with app_name, which is also the name used for the directory
-        in which settings are stored (`~/.{app_name}/settings.json`).
+        in which settings are stored (:samp:`~/.{app_name}/settings.json`).
         """
         super().__init__()
         self.app_name = app_name
@@ -54,7 +56,7 @@ class AppSettings(dict):
         """
         Loads the settings from the store (wherever that is).
 
-        If the settings don't exist, that's OK, it'll be created on save().
+        If the settings don't exist, that's OK, it'll be created on ``save()``.
         """
         try:
             settings_file = self._open_settings_file('r')
