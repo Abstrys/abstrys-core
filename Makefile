@@ -14,3 +14,7 @@ build: spotless
 
 upload: build
 	twine upload dist/*
+
+docs:
+	sphinx-apidoc --force abstrys -o doc
+	sphinx-build -b html doc build/html
